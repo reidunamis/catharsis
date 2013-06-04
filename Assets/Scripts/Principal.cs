@@ -1,9 +1,10 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Principal : MonoBehaviour {
 	
-	public ArrayList personnages;
+	public Dictionary<int, Personnage> personnages;
 	
 	void Awake () {
         DontDestroyOnLoad (transform.gameObject);
@@ -11,7 +12,7 @@ public class Principal : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		personnages = new ArrayList();
+		personnages = new Dictionary<int, Personnage>();
 		Personnage kojiro = new Personnage("Nagueru",
 				"Kojiro",
 				100,
@@ -34,8 +35,8 @@ public class Principal : MonoBehaviour {
 				5,
 				"manon",
 				"stand");
-		personnages.Add(kojiro);
-		personnages.Add(manon);
+		personnages.Add(0,kojiro);
+		personnages.Add(1,manon);
 	
 	}
 	

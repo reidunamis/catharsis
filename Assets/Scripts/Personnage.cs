@@ -6,8 +6,10 @@ public class Personnage{
 	//déclaration des variables 
 	public string nom;
 	public string prenom;
-	public int HP;
-	public int MP;
+	public int HPtotaux;
+	public int MPtotaux;
+	public int HPactuel;
+	public int MPactuel;
 	public int force;
 	public int defense;
 	public int magie;
@@ -15,6 +17,8 @@ public class Personnage{
 	public int souplesse;
 	public string nomCode;
 	public string status;
+	public int niveau;
+	public int experience;
 	
 	//constructeur
 	public Personnage (string unNom,
@@ -31,8 +35,10 @@ public class Personnage{
 	{
 		nom = unNom;
 		prenom = unPrenom;
-		HP = unHP;
-		MP = unMP;
+		HPtotaux = unHP;
+		MPtotaux = unMP;
+		HPactuel = unHP;
+		MPactuel = unMP;
 		force = uneForce;
 		defense = uneDefense;
 		magie = uneMagie;
@@ -40,5 +46,7 @@ public class Personnage{
 		souplesse = uneSouplesse;
 		nomCode= unNomCode;
 		status = unStatus;
+		niveau = 1;
+		experience = 0;
 	}
 }
