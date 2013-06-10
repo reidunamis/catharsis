@@ -4,10 +4,16 @@ var speed : float = 0.75;
 var jumpSpeed : float = 2;
 var gravity : float = 10.0;
 private var moveDirection : Vector3 = Vector3.zero;
+
+function Start()
+{
+}
+
 function Update() {
 
 	//InputPC();
-    var controller : CharacterController = GetComponent(CharacterController);
+    /*var controller : CharacterController = GetComponent(CharacterController);
+	//Debug.Log(controller.collider);
     if (controller.isGrounded) {
         // We are grounded, so recalculate
         // move direction directly from axes
@@ -20,10 +26,16 @@ function Update() {
         }
     }
     // Apply gravity
-    moveDirection.y -= gravity * Time.deltaTime;
+    //moveDirection.y -= gravity * Time.deltaTime;
     
     // Move the controller
-    controller.Move(moveDirection * Time.deltaTime);
+    controller.SimpleMove(moveDirection);*/
+    
+    	moveDirection = InputPC();
+        moveDirection = transform.TransformDirection(moveDirection);
+        moveDirection *= speed;
+        
+        transform.position += moveDirection* Time.deltaTime;
 }
 
 
