@@ -51,49 +51,65 @@ function InputPC()
 	{
 		transform.Find("Apparence").Find("Sprite").SendMessage("setAction", "walk");
 		transform.Find("Apparence").Find("Sprite").SendMessage("setDirection", "up_left");
-		return Vector3(0,0,1);
+		transform.rotation = Quaternion.Euler(0,-90,0);
+		return Vector3(1,0,0);
+		//return Vector3(0,0,1);
 	}
 	else if(Input.GetKey("left") && Input.GetKey("down"))
 	{
 		transform.Find("Apparence").Find("Sprite").SendMessage("setAction", "walk");
 		transform.Find("Apparence").Find("Sprite").SendMessage("setDirection", "down_left");
-		return Vector3(-1,0,0);
+		transform.rotation = Quaternion.Euler(0,180,0);
+		return Vector3(1,0,0);
+		//return Vector3(-1,0,0);
 	}
 	else if(Input.GetKey("right") && Input.GetKey("up"))
 	{
 		transform.Find("Apparence").Find("Sprite").SendMessage("setAction", "walk");
 		transform.Find("Apparence").Find("Sprite").SendMessage("setDirection", "up_right");
+		transform.rotation = Quaternion.Euler(0,0,0);
 		return Vector3(1,0,0);
+		//return Vector3(1,0,0);
 	}
 	else if(Input.GetKey("right") && Input.GetKey("down"))
 	{
 		transform.Find("Apparence").Find("Sprite").SendMessage("setAction", "walk");
 		transform.Find("Apparence").Find("Sprite").SendMessage("setDirection", "down_right");
-		return Vector3(0,0,-1);
+		transform.rotation = Quaternion.Euler(0,90,0);
+		return Vector3(1,0,0);
+		//return Vector3(0,0,-1);
 	}
 	else if(Input.GetKey("down"))
 	{
 		transform.Find("Apparence").Find("Sprite").SendMessage("setAction", "walk");
 		transform.Find("Apparence").Find("Sprite").SendMessage("setDirection", "down");
-		return  Vector3(-1 ,0,-1);
+		transform.rotation = Quaternion.Euler(0,135,0);
+		return Vector3(1,0,0);
+		//return  Vector3(-1 ,0,-1);
 	}
 	else if(Input.GetKey("up"))
 	{
 		transform.Find("Apparence").Find("Sprite").SendMessage("setAction", "walk");
 		transform.Find("Apparence").Find("Sprite").SendMessage("setDirection", "up");
-		return Vector3(1 ,0,1);
+		transform.rotation = Quaternion.Euler(0,-45,0);
+		return Vector3(1,0,0);
+		//return Vector3(1 ,0,1);
 	}
 	else if(Input.GetKey("right"))
 	{
 		transform.Find("Apparence").Find("Sprite").SendMessage("setAction", "walk");
 		transform.Find("Apparence").Find("Sprite").SendMessage("setDirection", "right");
-		return Vector3(1 ,0,-1);
+		transform.rotation = Quaternion.Euler(0,45,0);
+		return Vector3(1,0,0);
+		//return Vector3(1 ,0,-1);
 	}
 	else if(Input.GetKey("left"))
 	{
 		transform.Find("Apparence").Find("Sprite").SendMessage("setAction", "walk");
 		transform.Find("Apparence").Find("Sprite").SendMessage("setDirection", "left");
-		return Vector3(-1 ,0,1);
+		transform.rotation = Quaternion.Euler(0,-135,0);
+		return Vector3(1,0,0);
+		//return Vector3(-1 ,0,1);
 	}
 	else
 	{

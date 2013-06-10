@@ -30,8 +30,7 @@ public class Personnage{
 				int uneMagie,
 				int uneDefenseMagique,
 				int uneSouplesse,
-				string unNomCode,
-				string unStatus)
+				string unNomCode)
 	{
 		nom = unNom;
 		prenom = unPrenom;
@@ -45,7 +44,7 @@ public class Personnage{
 		defenseMagique = uneDefenseMagique;
 		souplesse = uneSouplesse;
 		nomCode= unNomCode;
-		status = unStatus;
+		status = "stand";
 		niveau = 1;
 		experience = 0;
 	}
