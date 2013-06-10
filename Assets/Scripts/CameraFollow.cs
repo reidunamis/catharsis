@@ -8,7 +8,7 @@ public class CameraFollow : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		theHero = GameObject.FindWithTag("Player");
-		Vector3 positionCamera = new Vector3(theHero.transform.position.x-0.3f, theHero.transform.position.y+0.5f, theHero.transform.position.z-0.3f);
+		Vector3 positionCamera = new Vector3(theHero.transform.position.x-0.5f, theHero.transform.position.y+0.8f, theHero.transform.position.z-0.5f);
 		transform.position = positionCamera;
 	}
 }

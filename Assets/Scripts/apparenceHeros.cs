@@ -6,7 +6,6 @@ using System.Collections.Generic;
 public class apparenceHeros : MonoBehaviour {
 	
 	Transform laCamera;
-	Vector3 versCamera;
 	public GameObject theHeroApparence;
 	string direction;
 	string action;
@@ -32,9 +31,9 @@ public class apparenceHeros : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		versCamera = new Vector3();
-		versCamera = laCamera.position - theHeroApparence.transform.position;
-		theHeroApparence.transform.rotation = Quaternion.LookRotation(versCamera);
+		Vector3 rotationCamera = laCamera.rotation.eulerAngles;
+		rotationCamera = new Vector3(-rotationCamera.x, rotationCamera.y - 180 ,rotationCamera.z);
+		theHeroApparence.transform.rotation = Quaternion.Euler(rotationCamera);
 				
 		
 		setAnimTexture(direction, action);
